@@ -3,13 +3,23 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100%;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: fixed;
+  inset: 0;
 }
 
 .text {
-  font-size: rem(27, 360);
+  font-size: 27px;
 }
 
 .horse {
-  font-size: rem(360, 360);
+  font-size: 31px;
+}
+
+@include m768 {
+  .horse {
+    font-size: 360px;
+  }
 }

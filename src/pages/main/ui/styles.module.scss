@@ -2,11 +2,9 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-
   height: 100%;
   max-width: 70vw;
   margin-inline: auto;
-
   gap: rem(40) rem(30);
 }
 
@@ -66,6 +64,7 @@
   }
 
   .wrapHorse {
+    height: 100vh;
     display: initial;
     visibility: visible;
   }

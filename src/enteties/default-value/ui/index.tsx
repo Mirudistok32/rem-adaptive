@@ -58,7 +58,7 @@ export const DefaultValue: FC<Props> = memo((props) => {
   return (
     <div className={cs(s.wrap, className)}>
       <span className={s.title}>
-        Размеры для экрана {screenSize}, значения в px:
+        Нажми и скопируй. Размеры для экрана {screenSize}, значения в px:
       </span>
       <ul className={s.list}>{renderList}</ul>
     </div>

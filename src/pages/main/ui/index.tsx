@@ -109,6 +109,7 @@ export const Main: FC = () => {
           className={s.wrapDefaultRight}
         />
       </div>
+
       <Horse text="Мобилки нет" classNameWrap={s.wrapHorse} />
     </>
   );
