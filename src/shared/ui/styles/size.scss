@@ -1,4 +1,0 @@
-/** Возвращает rem из px, с учетом размера экрана */
-@function rem($px, $screen: 1920) {
-  @return calc($px / ($screen / 100) * 1rem);
-}

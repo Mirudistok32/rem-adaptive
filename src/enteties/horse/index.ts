@@ -1,1 +1,0 @@
-export { Horse } from "./ui";
