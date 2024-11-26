@@ -1,0 +1,55 @@
+.wrap {
+  height: rem(100);
+  width: 100%;
+  padding: rem(20);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 3px var(--color4);
+
+  &:active {
+    scale: 0.9;
+  }
+}
+
+.value {
+  font-size: rem(24);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.area {
+  width: 0;
+  height: 0;
+  font-size: 0;
+  visibility: hidden;
+  pointer-events: none;
+  resize: none;
+}
+
+@include hover() {
+  .wrap {
+    cursor: pointer;
+    transition: background-color 0.1s ease-in-out;
+
+    &:hover {
+      background-color: var(--color4);
+      color: var(--color3);
+    }
+  }
+}
+
+@include m1440 {
+  .wrap {
+    padding: rem(15);
+  }
+
+  .value {
+    font-size: rem(27);
+  }
+}

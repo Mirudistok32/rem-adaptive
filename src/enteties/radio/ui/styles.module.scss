@@ -1,0 +1,161 @@
+.wrap {
+  height: rem(50);
+  padding: rem(10);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 3px var(--color4);
+}
+
+.list {
+  display: flex;
+  gap: rem(10);
+
+  & li,
+  label,
+  input {
+    cursor: pointer;
+  }
+}
+
+.item {
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  background-color: var(--color3);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: rem(60);
+  padding: rem(5) rem(10);
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+.input {
+  width: rem(70);
+  text-align: center;
+  margin-left: rem(10);
+}
+
+.popupClose,
+.add {
+  border-radius: 50%;
+  background-color: var(--color1);
+  color: white;
+  border: 1px solid transparent;
+
+  &:active {
+    scale: 0.9;
+    background-color: var(--color4);
+  }
+}
+
+.add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: rem(25);
+  height: rem(25);
+  line-height: 0;
+  text-rendering: geometricPrecision;
+  vertical-align: middle;
+
+  &:active {
+    line-height: normal;
+  }
+}
+
+.popup {
+  border: none;
+  padding: 0;
+  border-radius: 10px;
+
+  &[open]::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+  }
+}
+
+.popupWrapContent {
+  width: rem(600);
+  height: rem(600);
+  padding: rem(10);
+  display: grid;
+  grid-template-rows: max-content auto;
+}
+
+.popupClose {
+  justify-self: end;
+  font-size: rem(40);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: rem(30);
+  height: rem(30);
+  cursor: pointer;
+
+  grid-row: 1 / 2;
+}
+
+.popupContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  grid-row: 2 / 3;
+
+  span {
+    opacity: 0.5;
+  }
+
+  p {
+    font-size: rem(400);
+  }
+}
+
+@include hover {
+  .item {
+    &:hover {
+      background-color: var(--color1);
+    }
+  }
+
+  .popupClose,
+  .add {
+    $transition: 0.3s;
+
+    transition: background-color $transition ease-in-out,
+      color $transition ease-in-out;
+
+    &:hover {
+      background-color: white;
+      color: var(--color1);
+      border: 1px solid var(--color1);
+    }
+
+    &:active {
+      transition: none;
+      background-color: var(--color2);
+      color: white;
+    }
+  }
+}
+
+@include m1440 {
+  .wrap {
+    height: rem(90);
+  }
+
+  .item {
+    width: rem(100);
+    padding: rem(15);
+  }
+
+  .input {
+    width: rem(100);
+  }
+}

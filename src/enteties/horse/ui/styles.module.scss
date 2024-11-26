@@ -1,0 +1,15 @@
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.text {
+  font-size: rem(27, 360);
+}
+
+.horse {
+  font-size: rem(360, 360);
+}

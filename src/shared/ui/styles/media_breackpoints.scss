@@ -1,0 +1,24 @@
+/** Размер экрана 768px */
+@mixin m768() {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin m1440() {
+  @media (max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin hover() {
+  @media (hover: hover) {
+    @content;
+  }
+}
+
+@mixin touch() {
+  @media (hover: none) and (cursor: coarse) {
+    @content;
+  }
+}
